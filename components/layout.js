@@ -6,8 +6,8 @@ export const siteTitle = "Next.js Sample Website";
 
 export default function Layout({ children, home }) {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-700 overflow-hidden">
-      <div className="max-w-xl mx-auto px-6">
+    <div className="min-h-screen overflow-hidden text-gray-700 bg-gray-50">
+      <div className="max-w-xl px-6 mx-auto">
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <meta name="description" content="This is my blog." />
@@ -20,15 +20,15 @@ export default function Layout({ children, home }) {
           <meta name="og:title" content={siteTitle} />
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
-        <header className="text-center my-6">
+        <header className="my-6 text-center">
           {home ? (
             <>
               <img
                 src="/images/profile.jpg"
-                className="h-32 w-32 mx-auto rounded-full"
+                className="w-32 h-32 mx-auto rounded-full"
                 alt={name}
               />
-              <h1 className="text-5xl mt-4 font-bold">{name}</h1>
+              <h1 className="mt-4 text-5xl font-bold">{name}</h1>
             </>
           ) : (
             <>
@@ -36,12 +36,12 @@ export default function Layout({ children, home }) {
                 <a>
                   <img
                     src="/images/profile.jpg"
-                    className="h-32 w-32 mx-auto rounded-full"
+                    className="w-32 h-32 mx-auto rounded-full"
                     alt={name}
                   />
                 </a>
               </Link>
-              <h2 className="text-2xl mt-4 font-bold">
+              <h2 className="mt-4 text-2xl font-bold">
                 <Link href="/">
                   <a className="hover:text-blue-500">{name}</a>
                 </Link>
@@ -53,7 +53,7 @@ export default function Layout({ children, home }) {
         {!home && (
           <div className="my-6">
             <Link href="/">
-              <a className="hover:text-blue-500 hover:bg-blue-50 hover:border-blue-200 font-medium inline-flex border p-2 rounded pr-3 items-center gap-2">
+              <a className="inline-flex items-center gap-2 p-2 pr-3 font-medium border rounded hover:text-blue-500 hover:bg-blue-50 hover:border-blue-200">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"

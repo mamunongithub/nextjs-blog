@@ -16,12 +16,12 @@ export default function Home({ allPostsData }) {
         </p>
       </section>
       <section className="text-lg">
-        <h2 className="text-xl mt-8">Blog</h2>
-        <ul className="space-y-4 my-4">
+        <h2 className="mt-8 text-xl">Blog</h2>
+        <ul className="my-4 space-y-4">
           {allPostsData.map(({ id, date, title }) => (
             <li key={id}>
               <Link href={`/posts/${id}`}>
-                <a className="text-blue-500 hover:underline font-medium">
+                <a className="font-medium text-blue-500 hover:underline">
                   {title}
                 </a>
               </Link>
