@@ -4,7 +4,13 @@ import Link from "next/link";
 const name = "Mamun";
 export const siteTitle = "Next.js Sample Website";
 
-export default function Layout({ children, home }) {
+export default function Layout({
+  children,
+  home,
+}: {
+  children: React.ReactNode;
+  home?: boolean;
+}) {
   return (
     <div className="min-h-screen overflow-hidden text-gray-700 bg-gray-50">
       <div className="max-w-xl px-6 mx-auto">
